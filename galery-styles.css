@@ -1,0 +1,15 @@
+/* contenedor 2  */
+.menu{
+    box-sizing: border-box; 
+}
+.galery-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+   
+}
+.galery-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
