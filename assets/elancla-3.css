@@ -6,11 +6,17 @@ body {
     margin: 0;
     background:white ;
     font-family:'Roboto', sans-serif;;
-
 }
+
 h2{
     text-align: center;
+    padding-top: 50px;
 }
+
+.title2{
+    text-align: center;
+}
+
 html{
     font-size: 16px; 
 }
@@ -22,7 +28,7 @@ html{
 } 
 .title{
     text-align: center;
-    font-size: calc(3em +2vw);
+    font-size: 2rem;
     font-family: 'Pacifico', cursive;
 }
 
@@ -43,29 +49,49 @@ html{
 .galery-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 100px;
+    grid-auto-rows: 8rem;
     padding: 20px;
     grid-gap: 10px;
+    
 }
 .galery-img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 1px;
+    box-shadow: 0px 1px 10px
+    rgba(0,0,0, 0.5);
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 500ms ease-out;
 }
 .galery-item{
     position: relative;
+
 }
-.galery-title{
+.galery-title  {
+
     position: absolute;
-    bottom: 0;
+    top: 0;
+    margin-top: 0;
+    width: 100%;
+    height: 100%;
     color: white;
     align-content: center;
-    padding-left: 30%;
-    background:linear-gradient(rgba(255,255,255,0), rgba(0,0,0,1));
-    width: 100%;
+    padding-top: 20px;
+    text-align: center;
+    background:linear-gradient(rgba(98, 110, 218, 0.5), rgb(71, 125, 224));
+    transition: all 500ms ease-out;
+    opacity:0 ;
+    visibility: hidden;
+    text-align: center;
     font-size: 15px;
-    margin-bottom: 0;
 }
+.galery-item:hover > .galery-title{
+    opacity: 1;
+    visibility: visible;
+}
+
 .galery-item:nth-child(1){
     grid-column-start: span 2;
     /* grid-row: span 2; */
